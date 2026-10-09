@@ -1,6 +1,6 @@
 # Data — nothing downloaded ever gets committed.
 # Inside Airbnb's terms forbid republishing; INE data is re-downloadable.
-data/
+/data/
 *.csv
 *.csv.gz
 *.parquet
