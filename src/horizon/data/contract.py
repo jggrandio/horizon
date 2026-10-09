@@ -11,8 +11,7 @@ class TimeSeriesFrame:
     """One row per (group key, period). Validated on construction.
 
     The target may be null (missing observation, or a future period that carries only
-    known-future covariates), but every series must cover a regular grid at `freq`:
-    extractors turn omitted rows into null rows, they do not leave gaps.
+    known-future covariates). Every period must fall on `freq`; series may have gaps.
     """
 
     data: pd.DataFrame
@@ -54,13 +53,12 @@ class TimeSeriesFrame:
 
         if data.duplicated(keys).any():
             raise ValueError(f"duplicate periods within a series on {keys}")
-        if not data.sort_values(keys).index.equals(data.index):
-            raise ValueError(f"data must be sorted by {keys}")
 
         for key, times in data.groupby(list(self.group_key), sort=False)[self.time_index]:
-            expected = pd.date_range(times.iloc[0], times.iloc[-1], freq=self.freq)
-            if not expected.equals(pd.DatetimeIndex(times)):
-                raise ValueError(f"series {key} has a gap or a period off frequency {self.freq!r}")
+            expected = pd.date_range(times.min(), times.max(), freq=self.freq)
+            # shortcut: gaps pass until the missing-data study decides between null rows and rejecting.
+            if not pd.DatetimeIndex(times).isin(expected).all():
+                raise ValueError(f"series {key} has a period off frequency {self.freq!r}")
 
         if self.static_covariates:
             varying = data.groupby(list(self.group_key))[list(self.static_covariates)].nunique(

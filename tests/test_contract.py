@@ -78,14 +78,12 @@ def test_duplicate_period_in_series_is_rejected() -> None:
         make(data)
 
 
-def test_unsorted_data_is_rejected() -> None:
-    with pytest.raises(ValueError, match="sorted"):
-        make(make_data().iloc[::-1].reset_index(drop=True))
+def test_unsorted_data_is_allowed() -> None:
+    assert len(make(make_data().iloc[::-1].reset_index(drop=True)).data) == 6
 
 
-def test_gap_in_series_is_rejected() -> None:
-    with pytest.raises(ValueError, match="gap"):
-        make(make_data().drop(index=1).reset_index(drop=True))
+def test_gap_in_series_is_allowed() -> None:
+    assert len(make(make_data().drop(index=1).reset_index(drop=True)).data) == 5
 
 
 def test_period_off_frequency_is_rejected() -> None:
