@@ -11,6 +11,10 @@ modelling frameworks. Until now only `make verify` run by hand stood between a c
 - `import-linter` holds two forbidden contracts in `pyproject.toml`: the core does not
   import `horizon.domains`, and the core does not import `torch`, `lightgbm` or
   `pytorch_forecasting`. Indirect imports count.
+- A third contract applies both prohibitions to `horizon/__init__.py` alone. Python runs it
+  before any core package, so a domain imported there would load with the core, and the
+  two contracts above do not see it. A `layers` contract would miss it too, since the root
+  belongs to no layer.
 - `make verify` runs `lint-imports` alongside ruff, mypy and pytest.
 - A GitHub Actions workflow runs `make verify` on every push to `main` and every PR. Its
   `verify` job is a required check on `main`.

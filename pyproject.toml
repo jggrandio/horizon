@@ -94,6 +94,21 @@ source_modules = [
 ]
 forbidden_modules = ["torch", "lightgbm", "pytorch_forecasting"]
 
+# Importing any core package runs horizon/__init__.py first, which the contracts above
+# do not see. as_packages = false checks that one file, hence the explicit wildcard.
+[[tool.importlinter.contracts]]
+name = "The root package imports no domain or modelling framework"
+type = "forbidden"
+source_modules = ["horizon"]
+forbidden_modules = [
+    "horizon.domains",
+    "horizon.domains.**",
+    "torch",
+    "lightgbm",
+    "pytorch_forecasting",
+]
+as_packages = false
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-q --strict-markers"
