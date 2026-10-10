@@ -1,0 +1,358 @@
+[
+  {
+    "COD": "EOT2635",
+    "Nombre": "Nacional. Viajeros. Mojácar. Residentes en España.",
+    "T3_Unidad": "Viajeros",
+    "T3_Escala": " ",
+    "MetaData": [
+      {
+        "Id": 284332,
+        "T3_Variable": "Concepto turístico",
+        "Nombre": "Viajero",
+        "Codigo": "B"
+      },
+      {
+        "Id": 9834,
+        "T3_Variable": "TIPO DE CATEGORIA",
+        "Nombre": "Total categorías",
+        "Codigo": ""
+      },
+      {
+        "Id": 6064,
+        "T3_Variable": "PUNTOS TURISTÍCOS",
+        "Nombre": "Mojácar",
+        "Codigo": "G7"
+      },
+      {
+        "Id": 19964,
+        "T3_Variable": "RESIDENCIA/ORIGEN",
+        "Nombre": "Residentes en España",
+        "Codigo": ""
+      },
+      {
+        "Id": 72,
+        "T3_Variable": "Tipo de dato",
+        "Nombre": "Dato",
+        "Codigo": "0"
+      }
+    ],
+    "Data": [
+      {
+        "Fecha": "2020-07-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M07",
+        "Anyo": 2020,
+        "Valor": 15543.0
+      },
+      {
+        "Fecha": "2020-06-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M06",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-05-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M05",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-04-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M04",
+        "Anyo": 2020,
+        "Valor": 0.0
+      },
+      {
+        "Fecha": "2020-03-01T00:00:00.000+01:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M03",
+        "Anyo": 2020,
+        "Valor": 1710.0,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "COD": "EOT2636",
+    "Nombre": "Nacional. Viajeros. Mojácar. Residentes en el extranjero.",
+    "T3_Unidad": "Viajeros",
+    "T3_Escala": " ",
+    "MetaData": [
+      {
+        "Id": 284332,
+        "T3_Variable": "Concepto turístico",
+        "Nombre": "Viajero",
+        "Codigo": "B"
+      },
+      {
+        "Id": 9834,
+        "T3_Variable": "TIPO DE CATEGORIA",
+        "Nombre": "Total categorías",
+        "Codigo": ""
+      },
+      {
+        "Id": 6064,
+        "T3_Variable": "PUNTOS TURISTÍCOS",
+        "Nombre": "Mojácar",
+        "Codigo": "G7"
+      },
+      {
+        "Id": 19965,
+        "T3_Variable": "RESIDENCIA/ORIGEN",
+        "Nombre": "Residentes en el Extranjero",
+        "Codigo": ""
+      },
+      {
+        "Id": 72,
+        "T3_Variable": "Tipo de dato",
+        "Nombre": "Dato",
+        "Codigo": "0"
+      }
+    ],
+    "Data": [
+      {
+        "Fecha": "2020-07-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M07",
+        "Anyo": 2020,
+        "Valor": 1121.0
+      },
+      {
+        "Fecha": "2020-06-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M06",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-04-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M04",
+        "Anyo": 2020,
+        "Valor": 0.0
+      },
+      {
+        "Fecha": "2020-03-01T00:00:00.000+01:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M03",
+        "Anyo": 2020,
+        "Valor": 1372.0,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "COD": "EOT2637",
+    "Nombre": "Nacional. Pernoctaciones. Mojácar. Residentes en España.",
+    "T3_Unidad": "Pernoctaciones",
+    "T3_Escala": " ",
+    "MetaData": [
+      {
+        "Id": 284333,
+        "T3_Variable": "Concepto turístico",
+        "Nombre": "Pernoctaciones",
+        "Codigo": "C"
+      },
+      {
+        "Id": 9834,
+        "T3_Variable": "TIPO DE CATEGORIA",
+        "Nombre": "Total categorías",
+        "Codigo": ""
+      },
+      {
+        "Id": 6064,
+        "T3_Variable": "PUNTOS TURISTÍCOS",
+        "Nombre": "Mojácar",
+        "Codigo": "G7"
+      },
+      {
+        "Id": 19964,
+        "T3_Variable": "RESIDENCIA/ORIGEN",
+        "Nombre": "Residentes en España",
+        "Codigo": ""
+      },
+      {
+        "Id": 72,
+        "T3_Variable": "Tipo de dato",
+        "Nombre": "Dato",
+        "Codigo": "0"
+      }
+    ],
+    "Data": [
+      {
+        "Fecha": "2020-07-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M07",
+        "Anyo": 2020,
+        "Valor": 49387.0
+      },
+      {
+        "Fecha": "2020-06-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M06",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-05-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M05",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-04-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M04",
+        "Anyo": 2020,
+        "Valor": 0.0
+      },
+      {
+        "Fecha": "2020-03-01T00:00:00.000+01:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M03",
+        "Anyo": 2020,
+        "Valor": 4728.0,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "COD": "EOT2638",
+    "Nombre": "Nacional. Pernoctaciones. Mojácar. Residentes en el extranjero.",
+    "T3_Unidad": "Pernoctaciones",
+    "T3_Escala": " ",
+    "MetaData": [
+      {
+        "Id": 284333,
+        "T3_Variable": "Concepto turístico",
+        "Nombre": "Pernoctaciones",
+        "Codigo": "C"
+      },
+      {
+        "Id": 9834,
+        "T3_Variable": "TIPO DE CATEGORIA",
+        "Nombre": "Total categorías",
+        "Codigo": ""
+      },
+      {
+        "Id": 6064,
+        "T3_Variable": "PUNTOS TURISTÍCOS",
+        "Nombre": "Mojácar",
+        "Codigo": "G7"
+      },
+      {
+        "Id": 19965,
+        "T3_Variable": "RESIDENCIA/ORIGEN",
+        "Nombre": "Residentes en el Extranjero",
+        "Codigo": ""
+      },
+      {
+        "Id": 72,
+        "T3_Variable": "Tipo de dato",
+        "Nombre": "Dato",
+        "Codigo": "0"
+      }
+    ],
+    "Data": [
+      {
+        "Fecha": "2020-07-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M07",
+        "Anyo": 2020,
+        "Valor": 3113.0
+      },
+      {
+        "Fecha": "2020-06-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M06",
+        "Anyo": 2020,
+        "Valor": null,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      },
+      {
+        "Fecha": "2020-04-01T00:00:00.000+02:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M04",
+        "Anyo": 2020,
+        "Valor": 0.0
+      },
+      {
+        "Fecha": "2020-03-01T00:00:00.000+01:00",
+        "T3_TipoDato": "Definitivo",
+        "T3_Periodo": "M03",
+        "Anyo": 2020,
+        "Valor": 5110.0,
+        "Notas": [
+          {
+            "texto": "Dato no disponible por cierre debido a crisis COVID19",
+            "Fk_TipoNota": 1,
+            "textoTipo": null
+          }
+        ]
+      }
+    ]
+  }
+]

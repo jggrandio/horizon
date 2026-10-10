@@ -3,8 +3,14 @@ from pathlib import Path
 from typing import Any
 
 import pandas as pd
+import pytest
 
 from horizon.domains.tourism import ine
+
+# Real INE output (Mojácar, 2020-03 to 2020-07), cut from table 2078. In 2020-05 residents
+# come as `Valor: null` and foreign residents omit the month: both forms of missing.
+# Elaboración propia con datos extraídos del sitio web del INE: www.ine.es
+SAMPLE = Path(__file__).parent / "fixtures" / "ine_2078_sample.json"
 
 
 def series(
@@ -48,9 +54,21 @@ def test_tidy_pivots_sorts_and_fills_omitted_months() -> None:
     assert len(out) == 4
 
 
-def test_load_builds_a_valid_frame(tmp_path: Path) -> None:
-    dest = tmp_path / "2078.json"
-    dest.write_text(json.dumps(table()), encoding="utf-8")  # cached, so no download
-    frame = ine.load(dest)
-    assert frame.target == "nights"
-    assert frame.group_key == ("point", "residence")
+def test_unknown_concept_names_it() -> None:
+    with pytest.raises(KeyError, match="Pernoctación"):
+        ine.tidy([series("Altea", "Pernoctación", [(2024, 1, 1.0, "Definitivo")])])
+
+
+def test_real_sample_normalises_both_forms_of_missing() -> None:
+    out = ine.tidy(json.loads(SAMPLE.read_text(encoding="utf-8")))
+    may = out[out["period"] == "2020-05-01"]
+    assert may["residence"].tolist() == ["Residentes en España", "Residentes en el Extranjero"]
+    assert may[["nights", "travellers"]].isna().all().all()
+    assert out.groupby("residence").size().tolist() == [5, 5]
+
+
+def test_load_builds_a_valid_frame() -> None:
+    frame = ine.load(SAMPLE)  # exists, so no download
+    assert frame.data.shape == (10, 6)
+    assert frame.data["period"].min() == pd.Timestamp("2020-03-01")
+    assert frame.data["nights"].notna().sum() == 6

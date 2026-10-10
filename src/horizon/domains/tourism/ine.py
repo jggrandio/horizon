@@ -37,6 +37,10 @@ def tidy(table: list[dict[str, Any]]) -> pd.DataFrame:
     rows = []
     for series in table:
         meta = {m["T3_Variable"]: m["Nombre"] for m in series["MetaData"]}
+        if meta["Concepto turístico"] not in CONCEPTS:
+            raise KeyError(
+                f"unknown INE concept {meta['Concepto turístico']!r}, expected {list(CONCEPTS)}"
+            )
         for obs in series["Data"]:
             rows.append(
                 {
