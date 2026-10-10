@@ -5,6 +5,7 @@ description = "Pluggable time-series forecasting: reusable core, swappable domai
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "httpx>=0.28.1",
     "numpy>=2.0",
     "pandas>=2.2",
     "pyarrow>=17.0",
