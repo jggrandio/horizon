@@ -24,6 +24,7 @@ dev = [
     "mypy>=1.13",
     "pre-commit>=4.0",
     "pandas-stubs",
+    "import-linter>=2.15",
 ]
 
 [build-system]
@@ -65,6 +66,33 @@ disallow_any_generics = true
 [[tool.mypy.overrides]]
 module = ["lightgbm.*"]
 ignore_missing_imports = true
+
+[tool.importlinter]
+root_package = "horizon"
+# Needed to name third-party packages in forbidden_modules.
+include_external_packages = true
+
+[[tool.importlinter.contracts]]
+name = "The core does not know about domains"
+type = "forbidden"
+source_modules = [
+    "horizon.data",
+    "horizon.training",
+    "horizon.inference",
+    "horizon.backtesting",
+]
+forbidden_modules = ["horizon.domains"]
+
+[[tool.importlinter.contracts]]
+name = "The core imports no modelling framework"
+type = "forbidden"
+source_modules = [
+    "horizon.data",
+    "horizon.training",
+    "horizon.inference",
+    "horizon.backtesting",
+]
+forbidden_modules = ["torch", "lightgbm", "pytorch_forecasting"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
